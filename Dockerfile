@@ -29,7 +29,7 @@ RUN git clone https://github.com/warmcat/libwebsockets.git && \
     make && make install && \
     cd ~ && rm -rf libwebsockets
 
-RUN git clone https://github.com/meetecho/janus-gateway.git && \
+RUN git clone https://github.com/meetecho/janus-gateway.git -b v0.2.6 && \
     cd janus-gateway && \
     sh autogen.sh && \
     ./configure --prefix=/opt/janus --disable-rabbitmq --disable-mqtt --disable-plugin-sip && \
